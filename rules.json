@@ -1,0 +1,17 @@
+{
+"default_response": "I don't understand. Try 'help'.",
+"rules": [
+{
+"name": "greet",
+"patterns": ["^hello","^hi","hey"],
+"response": "Hello! How can I help you today?",
+"meta": {}
+},
+{
+"name": "status",
+"patterns": ["status","uptime","health"],
+"response": "System is operational.",
+"meta": {"automation": {"type": "http_call", "url": "https://example.com/notify", "method": "POST"}}
+}
+]
+}
